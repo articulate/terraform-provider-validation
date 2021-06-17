@@ -49,7 +49,7 @@ test: ## Run tests
 
 testacc: ## Run acceptance tests
 	@echo "+ $@"
-	@TF_ACC=1 go test ${PKG_LIST} -v $(TESTARGS) -timeout 120m
+	@TF_ACC=1 go test ${PKG_LIST} -v -cover $(TESTARGS) -timeout 120m
 .PHONY: testacc
 
 
