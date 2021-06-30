@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    validate = {
+    validation = {
       source = "articulate/validation"
     }
   }
@@ -14,7 +14,7 @@ variable "bar" {
   default = ""
 }
 
-data "validate" "test" {
+data "validation" "test" {
   condition     = var.foo != "" || var.bar != ""
   error_message = "You must set foo or bar."
 }

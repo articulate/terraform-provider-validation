@@ -6,10 +6,18 @@ or resource outputs.
 
 ## Using the provider
 
-This provider has a single _validate_ data source.
+This provider has a single _validation_ data source.
 
 ```hcl
-data "validate" "foo" {
+terraform {
+  required_providers {
+    validation = {
+      source = "articulate/validation"
+    }
+  }
+}
+
+data "validation" "foo" {
   condition     = var.foo != "" || var.bar != ""
   error_message = "You must set foo or bar."
 }
