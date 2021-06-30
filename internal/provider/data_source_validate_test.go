@@ -13,18 +13,18 @@ func TestAccDataSourceValidate(t *testing.T) {
 		Steps: []resource.TestStep{
 			{
 				Config: `
-data "validate" "foo" {
+data "validation" "foo" {
   condition     = true
   error_message = "Foo is invalid."
 }`,
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestMatchResourceAttr(
-						"data.validate.foo", "id", regexp.MustCompile("^Foo is invalid")),
+						"data.validation.foo", "id", regexp.MustCompile("^Foo is invalid")),
 				),
 			},
 			{
 				Config: `
-data "validate" "bar" {
+data "validation" "bar" {
   condition     = false
   error_message = "Bar is invalid."
 }`,

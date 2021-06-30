@@ -24,7 +24,7 @@ func New(version string) func() *schema.Provider {
 	return func() *schema.Provider {
 		return &schema.Provider{
 			DataSourcesMap: map[string]*schema.Resource{
-				"validate": dataSourceValidate(),
+				"validation": dataSourceValidate(),
 			},
 		}
 	}
