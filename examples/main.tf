@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     validate = {
-      source = "articulate/validate"
+      source = "articulate/validation"
     }
   }
 }

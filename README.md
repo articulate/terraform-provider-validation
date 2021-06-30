@@ -1,4 +1,4 @@
-# Terraform Provider Validate
+# Terraform Provider Validation
 
 Terraform provides a way to add validation to variables, but you can't use other
 variables in this validation. This allows you to do complex validation on variables
