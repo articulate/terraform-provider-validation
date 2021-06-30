@@ -1,4 +1,4 @@
-module github.com/articulate/terraform-provider-validate
+module github.com/articulate/terraform-provider-validation
 
 go 1.16
 

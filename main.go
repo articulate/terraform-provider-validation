@@ -5,7 +5,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/articulate/terraform-provider-validate/internal/provider"
+	"github.com/articulate/terraform-provider-validation/internal/provider"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 )
 
@@ -24,7 +24,7 @@ func main() {
 	opts := &plugin.ServeOpts{ProviderFunc: provider.New(version)}
 
 	if debugMode {
-		err := plugin.Debug(context.Background(), "registry.terraform.io/articulate/validate", opts)
+		err := plugin.Debug(context.Background(), "registry.terraform.io/articulate/validation", opts)
 		if err != nil {
 			log.Fatal(err.Error())
 		}
