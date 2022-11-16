@@ -3,15 +3,14 @@ package main
 import (
 	"flag"
 
-	"github.com/articulate/terraform-provider-validation/internal/provider"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
+
+	"github.com/articulate/terraform-provider-validation/internal/provider"
 )
 
-var (
-	// these will be set by the goreleaser configuration
-	// to appropriate values for the compiled binary
-	version = "dev"
-)
+// these will be set by the goreleaser configuration
+// to appropriate values for the compiled binary
+var version = "dev"
 
 func main() {
 	var debugMode bool
