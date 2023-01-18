@@ -1,5 +1,8 @@
 # Terraform Provider Validation
 
+> __DEPRECATED__: Starting with Terraform 1.2, you can acomplish more complex
+> validation using [preconditions](https://developer.hashicorp.com/terraform/tutorials/configuration-language/custom-conditions#add-preconditions).
+
 Terraform provides a way to add validation to variables, but you can't use other
 variables in this validation. This allows you to do complex validation on variables
 or resource outputs.
